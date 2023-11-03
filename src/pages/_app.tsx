@@ -1,6 +1,12 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { HeroProvider } from '../context/HeroContext';
+import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <HeroProvider>
+      <Component {...pageProps} className="container"/>
+    </HeroProvider>
+  );
 }
+
+export default MyApp;

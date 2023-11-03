@@ -4,8 +4,6 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +15,72 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(12, 32, 39);
+}
+
+.hero-column{/* 
+  display: flex;
+  align-items: center;
+  justify-items: center; */
+}
+
+.search-column {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  /* 
+  flex: 1;
+  padding: 10px;
+  border: 1px solid; */
+}
+
+.hero-list{/* 
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; */
+}
+
+.container-card {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rem 10rem 10rem 10rem;
+}
+
+.card{
+  width: 10rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.hero-card{
+  background-color:rgb(9, 57, 75) !important;
+}
+
+.hero-card img{
+  border-radius: 5%;
+}
+
+.hero-container{
+  margin-bottom: 15rem;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  /* 
+  display: flex;
+  flex-wrap: wrap; */
+}
+
+.app h1 {
+  font-size: 24px;
+  color: darkblue;
+}
+
+.app p {
+  font-size: 16px;
+  color: rgb(12, 32, 39);
 }
