@@ -17,6 +17,7 @@ const style = {
 };
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -26,25 +27,49 @@ export default function Home() {
   const [combatants, setCombatants] = useState([]);
   const [winner, setWinner] = useState(null);
 
+
+  const [variableToLog, setVariableToLog] = useState();
+
+  const openModal = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     axios
       .get("http://homologacao3.azapfy.com.br/api/ps/metahumans")
       .then((response) =>
-        setHeroes(response.data, console.log("API : ", response.data))
+        setHeroes(response.data)
       );
+      if (combatants.length > 2) {
+        setCombatants([]);
+      }
   }, []);
 
   const filteredHeroes = heroes.filter((hero) =>
     hero.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  const startCombat = (hero1: any, hero2: any) => {
-    setCombatants([]);
-    // Lógica da comparação dos heróis
+  const startCombat = (selectedHero) => {
+    setCombatants((combatants) => {
+      return [...combatants, selectedHero];
+    });
+    if (combatants.length > 2) {
+      setCombatants([]);
+    }
+
+  };
+
+  const handleScreenClick = () => {
+    if (isOpen) {
+      setCombatants([]);
+      setIsOpen(false);
+    }
+    /* setCombatants([]);
+    setIsOpen(false);  */     
   };
 
   return (
-    <div className="">
+    <div className="" onClick={handleScreenClick}>
       <h1 style={{ color: "white", textAlign: "center", fontSize: "100px" }}>
         Hero Battle
       </h1>
@@ -58,7 +83,7 @@ export default function Home() {
             onChange={(e) => setFilter(e.target.value)}
           />
           <div className="combat-modal">
-            <CombatModal /* winner={winner} onClose={() => setWinner(null)} */ />
+            <CombatModal combatants={combatants} isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
         

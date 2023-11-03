@@ -5,8 +5,7 @@ import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 
 const HeroCard = ({ hero, startCombat }) => {
   return (
-    <Card className='hero-card' 
-    onClick={() => startCombat(hero)}
+    <Card className='hero-card' onClick={() => startCombat(hero)}
     >
       <CardContent style={{ color: 'white' }}>
         <img src={hero.images.sm} alt={hero.name} style={{ width: '150px', height: '150px' }} />
@@ -22,14 +21,6 @@ const HeroCard = ({ hero, startCombat }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        {/* <Button
-          size="small"
-          onClick={() => startCombat(hero)}
-          variant="contained"
-          color="primary"
-        >
-          Desafiar
-        </Button> */}
       </CardActions>
     </Card>
   );
