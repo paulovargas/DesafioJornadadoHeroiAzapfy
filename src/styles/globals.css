@@ -18,31 +18,22 @@ body {
   background-color: rgb(12, 32, 39);
 }
 
-.hero-column{/* 
+.hero-column{
   display: flex;
-  align-items: center;
-  justify-items: center; */
 }
 
 .search-column {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  /* 
-  flex: 1;
-  padding: 10px;
-  border: 1px solid; */
 }
 
-.hero-list{/* 
-  width: 250px;
+.hero-list{
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px; */
+  
 }
 
 .container-card {
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -70,9 +61,6 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  /* 
-  display: flex;
-  flex-wrap: wrap; */
 }
 
 .app h1 {

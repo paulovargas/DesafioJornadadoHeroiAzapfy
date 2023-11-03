@@ -21,8 +21,7 @@ export default function Home() {
 
   const startCombat = (hero1: any, hero2: any) => {
     setCombatants([]);
-    // Implemente a lógica de combate aqui para definir o vencedor.
-    // Atualize o estado 'winner' com o vencedor do combate.
+    // Lógica da comparação dos heróis
   };
 
   return (
