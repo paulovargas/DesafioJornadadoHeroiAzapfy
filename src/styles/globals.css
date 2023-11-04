@@ -15,7 +15,8 @@
 }
 
 body {
-  background-color: rgb(12, 32, 39);
+  background-color: rgb(12, 32, 39);/* 
+  background-color: rgb(8, 56, 73); */
 }
 
 .hero-column{
@@ -42,9 +43,8 @@ body {
 
 .container-combat {
   display: flex;
-  flex-direction: row-reverse;
-  border: 2px solid #FF0000;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   /* flex-wrap: wrap;
   padding: 10rem 10rem 10rem 10rem; */
 }
@@ -57,21 +57,25 @@ body {
 .card{
   width: auto !important;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 10rem;
   margin: 1rem 1rem 1rem 1rem;
 }
 
 .table{
-  width: auto !important;
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  width: 10rem;
-  margin: 1rem 1rem 1rem 1rem;
+  flex-direction: row;
 }
 
 .table td{
+  color: white;
   text-align: center;
+}
+
+.hero1{
+  text-decoration: white;
+  text-align: start;
 }
 
 .hero-card{

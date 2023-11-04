@@ -12,7 +12,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "80%",
-  bgcolor: "background.paper",
+  bgcolor: "rgb(8, 56, 73)",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
@@ -42,7 +42,7 @@ function CombatModal({ combatants, isOpen, setIsOpen }) {
       >
         <Box sx={style}>
           <div className="">
-            <h1>O vencedor neste combate é : Fulano</h1>
+            <h1 className="hero1">O vencedor neste combate é : Fulano</h1>
             <div className="container-combat">
               <div className="card">
                 <HeroCard
@@ -55,33 +55,67 @@ function CombatModal({ combatants, isOpen, setIsOpen }) {
                 <table>
                   <tr></tr>
                   <tr>
-                    <td>{combatants[0]?.powerstats.intelligence}</td>
+                    <td className="hero1">{combatants[0]?.powerstats.intelligence}</td>
+                  </tr>
+                  <tr>
+                    <td className="hero1">{combatants[0]?.powerstats.strength}</td>
+                  </tr>
+                  <tr>
+                    <td className="hero1">{combatants[0]?.powerstats.speed}</td>
+                  </tr>
+                  <tr>
+                    <td className="hero1">{combatants[0]?.powerstats.durability}</td>
+                  </tr>
+                  <tr>
+                    <td className="hero1">{combatants[0]?.powerstats.power}</td>
+                  </tr>
+                  <tr>
+                    <td className="hero1">{combatants[0]?.powerstats.combat}</td>
+                  </tr>
+                </table>
+              </div>
+              <div className="table">
+                <table>
+                  <tr></tr>
+                  <tr>
                     <td>Inteligência</td>
+                  </tr>
+                  <tr>
+                    <td >Força</td>
+                  </tr>
+                  <tr>
+                    <td>Velocidade</td>
+                  </tr>
+                  <tr>
+                    <td>Durabilidade</td>
+                  </tr>
+                  <tr>
+                    <td>Poder</td>
+                  </tr>
+                  <tr>
+                    <td>Combate</td>
+                  </tr>
+                </table>
+              </div>
+              <div className="table">
+                <table>
+                  <tr></tr>
+                  <tr>
                     <td>{combatants[1]?.powerstats.intelligence}</td>
                   </tr>
                   <tr>
-                    <td>{combatants[0]?.powerstats.strength}</td>
-                    <td>Força</td>
                     <td>{combatants[1]?.powerstats.strength}</td>
                   </tr>
                   <tr>
-                    <td>{combatants[0]?.powerstats.speed}</td>
-                    <td>Velocidade</td>
                     <td>{combatants[1]?.powerstats.speed}</td>
                   </tr>
                   <tr>
-                    <td>{combatants[0]?.powerstats.durability}</td>
-                    <td>Durabilidade</td>
                     <td>{combatants[1]?.powerstats.durability}</td>
                   </tr>
                   <tr>
                     <td>{combatants[0]?.powerstats.power}</td>
-                    <td>Poder</td>
-                    <td>{combatants[0]?.powerstats.power}</td>
                   </tr>
                   <tr>
-                    <td>{combatants[0]?.powerstats.combat}</td>
-                    <td>Combate</td>
                     <td>{combatants[0]?.powerstats.combat}</td>
                   </tr>
                 </table>
